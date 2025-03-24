@@ -129,11 +129,64 @@ The table allows you to see all the rows and columns associated with the feature
 
 ## 6. Block Planting Tool
 
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_1.png)
 
+The Block Planting Tool is how foresters track whether a block is planted/surveyed. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_2.png)
+
+**Top Left** you'll see four widgets. Each widget controls a particular function on the map. The **first** widget controls the layers. The most useful is to show **work orders**, so foresters will be able to see their plantings. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_3.png)
+
+The **second widget** is called **Batch Attribute Editor**, which allows foresters to select multiple blocks of which they have surveyed or planted. This is the reason the Block Planting tool is separate from the STP App, because you can't edit multiple features (as of now) in the STP App. In the window, there are **four** shapes, which are different methods of selecting features. Stick to the last two, which are the polygon and blob tool. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_4.png)
+
+The **third widget** is called the **Political Filter**, which allows you to filter by political boundaries. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_5.png)
+
+The **fourth widget** is called the **Contract Filter**, which allows you to filter the work orders by contracts.
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_6.png)
+
+The sidewalks are either black or green, where green signifies the block has been surveyed and black means that it hasn't. Each sidewalk also has a unique identifier associated with it, which is shown in the above image with a numeral in the center of the sidewalk. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_7.png)
+
+So, let's edit some sidewalks. In the above image, I selected the **Batch Attribute Editor** widget and I selected the polygon tool. I created a polygon over the blocks that I want to alter, which turn green when selected. To finish the selection, I just double click the polygon, as shown in the image with the tooltip *"Double-click to complete". *
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_8.png)
+
+After selection and the closing of the polygon, a menu as shown above will pop up. Changing Block Planting from **No** to **Yes** will change the status of the sidewalk. There is also *Season Year* and *Comments* where you can the season and year (Fall 2025) or any comments (Planted or whatever). 
 
 ## 7. Map
 
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_1.png)
 
+This is the map, where everything is visualized.  There are tools in the corners of the map, **Top Left, Top Right, and Bottom Right**. 
 
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_2.png)
 
+**Top Right** is the location of three different tools. The one above shows the **Search** tool, which enables you to search for WOID for either STP or PP work orders and addresses. It's recommended you keep it on **All**.
 
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_3.png)
+
+The second tool, under **Search** is **Basemap**, which allows you to change the background of the map. This is good if you want to see aerial imagery. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_4.png)
+
+The third tool, under **Basemap** is **Measure**, which allows you to measure the distance between two or more points. After clicking **Measure** just change the unit and start plotting. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_5.png)
+
+**Top Left** is the location of **+ / -** which controls zoom in / zoom out. There is also a house button, which returns you to the default map view extent. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_6.png)
+
+**Top Left** also has a **Select** tool, which allows you to select WOs. Similar to the **Block Planting Tool** use the polygon or blob tool and draw your selection. 
+
+![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_7.png)
+
+After selecting WOs, **Bottom Right** shows **Selected features: 0**.  This is a count and will show you how many WOs you selected with the **Select** tool
