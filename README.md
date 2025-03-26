@@ -1,192 +1,221 @@
 # Street Tree Planting App
 
-This is a quick how-to regarding the Street Tree Planting App. 
+This is a quick how-to guide for the Street Tree Planting App.
 
+A glossary of technical terms is available at the end of this document for users unfamiliar with certain terminology.
 
-# Overview
+## Overview
+
 ![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/STP_Overview.png)
-The app has seven main panels: 
 
- 1. Layer
- 2. Legend
- 3. Filter
- 4. Editor
- 5. Table
- 6. Block Planting Tool
- 7. Map
+The app has seven main panels:
+
+1.  Layer
+    
+2.  Legend
+    
+3.  Filter
+    
+4.  Editor
+    
+5.  Table
+    
+6.  Block Planting Tool
+    
+7.  Map
+    
+
+Each panel of the app serves a distinct purpose to streamline street tree management and planting tasks.
 
 ## 1. Layer
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Layer_1.png)
 
-The above panel controls what is visible in the map frame. Just simply **click** the box (▢) on the left of the layer name to display it on the map.
+The Layer panel allows users to control the visibility of data layers on the map.
 
- - [ ] Hidden Layer
- - [x]  Viewable layer
+![Layer](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Layer_1.png)
 
-In some cases, there are groupings of layers, which is denoted by the symbol **>**.  The layer group has a Group Name, like **Data: Assets** in the above example. You can choose to **click** the box (▢) to hide/show all layers of that grouping. However, clicking **>** will expand that grouping as seen below. 
+This panel controls what is visible in the map frame. Simply **click** the box (▢) to the left of a layer name to display it on the map.
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Layer_2.png)
+-   Hidden Layer
+    
+-   Viewable Layer
+    
 
-Once the grouping is expanded, the **>** turns into a **v** and will show the once hidden layers for that group. Then you can select whichever layers you want shown by clicking the box (▢). When you are done, you can just close the group by clicking **v** and it will turn into **>**. 
+Some layers are grouped under a category, denoted by the symbol **>**. For example, **Data: Assets**. Clicking the box (▢) next to the group name toggles visibility for all layers in the group. Clicking **>** expands the group:
+
+![Layer Expanded](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Layer_2.png)
+
+Once expanded, **>** becomes **v**. You can toggle individual layers on or off. Click **v** again to collapse the group.
 
 ## 2. Legend
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Legend_1.png)
 
-The legend displays all the symbology (colors/shapes) of all the layers in the application. When you click on the **≣** it will expand the symbology menu for that specific layer. 
+The Legend panel provides a key to interpret the colors and symbols of visible map layers.
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Legend_2.png)
+![Legend](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Legend_1.png)
 
-The above image shows the **Work Orders: STP** layer's expanded symbology. Reminder, symbology is only displayed for layers that are currently visible. Otherwise **≣** will be greyed out. 
+The legend displays symbology (colors/shapes) for visible layers. Clicking **≣** expands the symbology menu:
+
+![Legend Expanded](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Legend_2.png)
+
+Only layers that are visible have symbology; otherwise, **≣** is greyed out.
 
 ## 3. Filter
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_1.png)
 
-This is a basic filter for both **Street Tree Planting & Parks Planting Work Orders**. Each filter has a group **▶** and clicking on that group will expand the menu for that specific filter. 
+The Filter panel helps users narrow down displayed data by specific criteria such as contract, status, or planting season.
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_2.png)
+![Filter](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_1.png)
 
-The above shows the filter **WO: STP Contract** in its **first** expanded state. As the filter states, this one filters all STP Work Orders by specific contract(s).
+This tool filters **Street Tree Planting** and **Parks Planting Work Orders**. Click **▶** to expand a filter group:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_3.png)
+![Filter Contract](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_2.png)
 
-This is the **secondary** expanded state, where the **WO: STP Contract** shows a list of all filterable selections. In the above photo, **BG-123M** was selected (▢). However, one more step is required to actually apply the filter to the map. 
+Each filter lets you choose specific criteria. For example, selecting **BG-123M** in **WO: STP Contract**:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_4.png)
+![Filter Selection](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_3.png)
 
-The above photo shows the filter now in an active state. To activate a filter, simply **click** the button on the right side of **WO: STP Contract**. The color should change to green once performed correctly and now will display that particular filter on the map. 
+To activate the filter, click the button next to the filter name. It will turn green when active:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_5.png)
+![Filter Activated](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_4.png)
 
-However, you can add multiple filters on-top of each other. So, in the above example **WO: STP Contract** is activated with a selected filter, but also **WO: Status** is also activated. Meaning that **Work Orders: STP** layer now is filtered by a Contract and also Status. In this example **Contract** = **BG-123M** and **Status = Open OR Closed**.
+You can apply multiple filters simultaneously:
 
-You can put as many filters as possible on **Work Orders: STP and Work Orders: PP** by using the Filter tool. 
+![Multiple Filters](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Filter_5.png)
+
+In this case, **Contract = BG-123M** and **Status = Open OR Closed**. You can stack as many filters as needed for **Work Orders: STP** and **Work Orders: PP**.
 
 ## 4. Editor
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_1.png)
+The Editor panel enables users to create custom shapefiles for defining zones, planning work, and assigning responsibilities.
 
-The editor is responsible for creating shapefiles that are unique to an individual team/borough. The use case is for Senior Foresters to create zones of interest for reference or to be used by their foresters for surveying. 
+![Editor](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_1.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_2.png)
+The editor allows teams/boroughs to create shapefiles. Senior Foresters can define zones for reference or surveying.
 
-To populate the editor, you must turn on the layer in the above image by clicking the ▢.
+First, enable the appropriate layer:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_3.png)
+![Enable Layer](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_2.png)
 
-Afterwards you'll see a list of all boroughs along with some extra projects. You can turn off/on any of the features you need/don't need. 
+Select boroughs or projects as needed:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_1.png)
+![Select Features](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_3.png)
 
-Once you have your features visible, the editor will populate like shown above. If you'd like to add a shape, simply click the **New Feature**. 
+Click **New Feature** to add a shape:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_4.png)
+![New Feature](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_4.png)
 
-One **New Feature** is clicked, the editor will show as above. You are given a couple of tools to create in the toolbox under **Create features**. The default polygon tool should suffice, and you draw your polygon on the map. Once the polygon is completed (double click the last point) simply click the **Create** button to finish the polygon. 
+Use the default polygon tool to draw. Double-click the last point to complete. Click **Create** to finalize the shape:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_5.png)
+![Polygon Complete](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_5.png)
 
-**The polygon is now finished**. Information can be added to the polygon, like an Assignment column where each polygon has a forester name (polygon color based on forester name). If you'd like to **delete** the polygon, you can click **Select** in the editor box (shown above) and then click on the polygon you want removed.   
+You can then add attributes, like forester name. To delete a shape, click **Select**, choose the shape, then click **Delete**:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_6.png)
-
-After clicking the polygon, you can simply click **Delete** to remove the polygon (as shown above). 
+![Delete Polygon](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Editor_6.png)
 
 ## 5. Table
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_1.png)
 
-The table allows you to see all the rows and columns associated with the feature you're viewing. The table is interactive, with tools located on the top left and top right of the table, along with a **Total / Selection** count in the bottom left. 
+The Table panel displays detailed attributes of map features, providing tools to query, analyze, and export data.
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_2.png)
+![Table](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_1.png)
 
-**Top Left:** The app with always load the attribute table for **Work Orders: STP** as the default, however if you'd like to change the attribute table to a different feature, you can click the dialogue box and a list should appear. Afterwards just select the feature of which you'd like to see the attribute table. 
+The table displays rows/columns of visible features. Key areas include:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_3.png)
+**Top Left:** Change which feature's attribute table is shown:
 
-**Top Right** There are five buttons, the first three aren't important. The fourth one **(⇆)** allows you to control what fields are visible on the attribute table. This is useful since some features have lots of columns and if you only care to use a couple, you can deselect the columns you don't want visible.  
+![Change Table](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_2.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_4.png)
+**Top Right:**
 
-**Top Right** The fifth button **(∷)** is the most important. Pressing the button will expand a menu giving you several options: 
+-   **⇆** = Choose visible fields
+    
+-   **∷** = Opens the tools menu:
+    
+    -   **Set Filter** – custom queries
+        
+    -   **Zoom to** – zoom to selected features
+        
+    -   **Pan To** – pan without zoom
+        
+    -   **Statistics** – run count, sum, min, max, avg, std dev
+        
+    -   **Export** – download as JSON / CSV / GeoJSON
+        
 
- - Set Filter
-	 - Allows you to set custom filters for the attribute table. Helpful if you need specific queries. 
- - Zoom to
-	 - Will move frame and zoom into the map frame for the items listed in the attribute (all or selected). 
- - Pan To
-	 - Will pan to items listed in attribute (all or selected) but will not zoom.
- - Statistics
-	 - Can run the following statistics for a column
-		 - Count
-		 - Sum
-		 - Min
-		 - Max
-		 - Avg
-		 - Std Dev
- - Export
-	 - Allows to export the attribute table to a JSON / CSV / GeoJSON. This is perhaps one of the most used proponents of the application to send out queried listings. 
-
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_5.png)
+![Tools Menu](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Table_4.png)
 
 ## 6. Block Planting Tool
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_1.png)
+This tool allows foresters to efficiently track planting and survey status of city blocks through batch editing.
 
-The Block Planting Tool is how foresters track whether a block is planted/surveyed. 
+![Block Tool](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_1.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_2.png)
+This tool tracks whether blocks are planted or surveyed.
 
-**Top Left** you'll see four widgets. Each widget controls a particular function on the map. The **first** widget controls the layers. The most useful is to show **work orders**, so foresters will be able to see their plantings. 
+**Top Left:** Four widgets:
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_3.png)
+1.  Layers (show work orders)
+    
+2.  **Batch Attribute Editor** – select/edit multiple blocks
+    
 
-The **second widget** is called **Batch Attribute Editor**, which allows foresters to select multiple blocks of which they have surveyed or planted. This is the reason the Block Planting tool is separate from the STP App, because you can't edit multiple features (as of now) in the STP App. In the window, there are **four** shapes, which are different methods of selecting features. Stick to the last two, which are the polygon and blob tool. 
+![Batch Editor](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_3.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_4.png)
+Use the polygon/blob tool to select blocks:
 
-The **third widget** is called the **Political Filter**, which allows you to filter by political boundaries. 
+![Polygon Tool](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_7.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_5.png)
+3.  **Political Filter** – filter by political boundaries
+    
+4.  **Contract Filter** – filter by contracts
+    
 
-The **fourth widget** is called the **Contract Filter**, which allows you to filter the work orders by contracts.
+![Contract Filter](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_5.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_6.png)
+Sidewalks are either green (surveyed) or black (not surveyed). Each sidewalk has an ID number:
 
-The sidewalks are either black or green, where green signifies the block has been surveyed and black means that it hasn't. Each sidewalk also has a unique identifier associated with it, which is shown in the above image with a numeral in the center of the sidewalk. 
+![Sidewalk Status](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_6.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_7.png)
+After selection, use the menu to mark planting as **Yes**, and optionally add season, year, or comments:
 
-So, let's edit some sidewalks. In the above image, I selected the **Batch Attribute Editor** widget and I selected the polygon tool. I created a polygon over the blocks that I want to alter, which turn green when selected. To finish the selection, I just double click the polygon, as shown in the image with the tooltip *"Double-click to complete". *
-
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_8.png)
-
-After selection and the closing of the polygon, a menu as shown above will pop up. Changing Block Planting from **No** to **Yes** will change the status of the sidewalk. There is also *Season Year* and *Comments* where you can the season and year (Fall 2025) or any comments (Planted or whatever). 
+![Edit Block](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Block_8.png)
 
 ## 7. Map
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_1.png)
+The Map panel is the primary interface for viewing, interacting with, and managing geospatial data.
 
-This is the map, where everything is visualized.  There are tools in the corners of the map, **Top Left, Top Right, and Bottom Right**. 
+![Map](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_1.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_2.png)
+The main visual workspace. Tool locations:
 
-**Top Right** is the location of three different tools. The one above shows the **Search** tool, which enables you to search for WOID for either STP or PP work orders and addresses. It's recommended you keep it on **All**.
+**Top Right:**
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_3.png)
+-   **Search** – find WOIDs or addresses  
+    ![Search Tool](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_2.png)
+    
+-   **Basemap** – switch backgrounds  
+    ![Basemap](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_3.png)
+    
+-   **Measure** – measure distances
 
-The second tool, under **Search** is **Basemap**, which allows you to change the background of the map. This is good if you want to see aerial imagery. 
+![Measure](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_4.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_4.png)
+**Top Left:** Zoom (+/-), Home button (reset view), and Select tool:
 
-The third tool, under **Basemap** is **Measure**, which allows you to measure the distance between two or more points. After clicking **Measure** just change the unit and start plotting. 
+![Zoom & Select](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_6.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_5.png)
+**Bottom Right:** Displays selected feature count. Use the Select tool to draw a polygon and select WOs for the count to appear. 
 
-**Top Left** is the location of **+ / -** which controls zoom in / zoom out. There is also a house button, which returns you to the default map view extent. 
+![Select Tool](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_7.png)
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_6.png)
 
-**Top Left** also has a **Select** tool, which allows you to select WOs. Similar to the **Block Planting Tool** use the polygon or blob tool and draw your selection. 
+## Glossary
 
-![Overview](https://raw.githubusercontent.com/shawnganznycparks/STP-Redux-App/main/Map_7.png)
-
-After selecting WOs, **Bottom Right** shows **Selected features: 0**.  This is a count and will show you how many WOs you selected with the **Select** tool
+-   **WO**: Work Order
+    
+-   **STP**: Street Tree Planting
+    
+-   **PP**: Parks Planting
+    
+-   **Shapefile**: A geospatial vector data format
+    
+-   **Polygon Tool**: A digital drawing tool used to create shapes on a map
+    
+-   **Batch Attribute Editor**: Tool used for simultaneously editing multiple map features
