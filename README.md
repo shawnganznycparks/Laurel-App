@@ -1,4 +1,4 @@
-# Street Tree Planting App
+# Laurel App
 
 This is a quick how-to guide for the Street Tree Planting App.
 
